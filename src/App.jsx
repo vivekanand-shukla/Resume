@@ -1,12 +1,14 @@
+
+
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { FaCode } from "react-icons/fa";
 import * as FaIcons from "react-icons/fa";
 import * as SiIcons from "react-icons/si";
-import {Link } from "react-router-dom"
 
-// import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+
 
 // ✅ Data outside component
 const projectsData = [
@@ -29,16 +31,7 @@ Built with a React frontend, Express/Node backend, and MongoDB database.`,
     demolink:"https://e-commerce-frontend-z4yi-fpgkz8heu-vivekanand-shuklas-projects.vercel.app/",
      codelink:"https://github.com/vivekanand-shukla/E_commerce_Frontend",
   },
-  {
-    title: "Mitra",
-    description:
-      "An intuitive CRM system designed for lead management with pipeline visualization, automated follow-ups, and detailed analytics.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-    tags: ["React Native", "GraphQL", "PostgreSQL", "Chart.js"],
-    demolink:"",
-    codelink:"",
-  },
+  
 ];
 
 const techStackData = [
@@ -101,6 +94,108 @@ const Portfolio = () => {
       }}
     >
       {/* Navbar */}
+      <style>
+        {`
+        
+        /* ==== Media Queries for Responsive Design ==== */
+        
+        /* Projects Grid - 3 columns to 2 columns */
+        @media (max-width: 1024px) and (min-width: 768px) {
+          .projects-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        
+        /* Projects Grid - 2 columns to 1 column */
+        @media (max-width: 767px) {
+          .projects-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+        
+        /* Tech Stack Grid - 4 columns to 3 columns */
+        @media (max-width: 992px) and (min-width: 768px) {
+          .tech-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+          }
+        }
+        
+        /* Tech Stack Grid - 3 columns to 2 columns */
+        @media (max-width: 767px) and (min-width: 480px) {
+          .tech-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+        
+        /* Tech Stack Grid - 2 columns to 1 column for very small screens */
+        @media (max-width: 479px) {
+          .tech-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+        
+        /* Contact Grid - 2 columns to 1 column */
+        @media (max-width: 767px) {
+          .contact-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+        
+        /* Hero Section Typography */
+        @media (max-width: 767px) {
+          .hero-title {
+            font-size: 42px !important;
+          }
+          .hero-subtitle {
+            font-size: 18px !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .hero-title {
+            font-size: 32px !important;
+          }
+          .hero-subtitle {
+            font-size: 16px !important;
+          }
+        }
+        
+        /* Section Headings */
+        @media (max-width: 767px) {
+          .section-heading {
+            font-size: 36px !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .section-heading {
+            font-size: 28px !important;
+          }
+        }
+        
+        /* Button Group - Stack vertically on small screens */
+        @media (max-width: 480px) {
+          .button-group {
+            flex-direction: column !important;
+          }
+          .button-group button,
+          .button-group a {
+            width: 100% !important;
+          }
+        }
+        
+        /* Scroll to Top Button */
+        @media (max-width: 480px) {
+          .scroll-top-btn {
+            bottom: 20px !important;
+            right: 20px !important;
+            width: 45px !important;
+            height: 45px !important;
+          }
+        }
+        
+        `}
+      </style>
       <nav
         className="navbar navbar-expand-lg navbar-dark fixed-top"
         style={{
@@ -160,6 +255,7 @@ const Portfolio = () => {
         >
           <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%" }}>
             <h1
+              className="hero-title"
               style={{
                 fontSize: isMobile ? 42 : 64,
                 fontWeight: 700,
@@ -169,6 +265,7 @@ const Portfolio = () => {
               Vivekanand Shukla
             </h1>
             <p
+              className="hero-subtitle"
               style={{
                 fontSize: isMobile ? 18 : 24,
                 color: "#9ca3af",
@@ -209,7 +306,7 @@ const Portfolio = () => {
               Specializing in React, Node.js, and MongoDB to build scalable and
               user-centered applications.
             </p>
-            <div style={{ display: "flex", gap: 16, marginTop: 32 }}>
+            <div className="button-group" style={{ display: "flex", gap: 16, marginTop: 32 }}>
               <button
                 style={{
                   padding: "12px 28px",
@@ -252,7 +349,7 @@ const Portfolio = () => {
           }}
         >
           <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%" }}>
-            <h2 style={{ fontSize: 48, fontWeight: 700, marginBottom: 12 }}>
+            <h2 className="section-heading" style={{ fontSize: 48, fontWeight: 700, marginBottom: 12 }}>
               Projects
             </h2>
             <p style={{ fontSize: 18, color: "#9ca3af", marginBottom: 16 }}>
@@ -267,6 +364,7 @@ const Portfolio = () => {
               }}
             />
             <div
+              className="projects-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
@@ -374,7 +472,7 @@ const Portfolio = () => {
         {/* Tech Stack */}
         <section id="techstack" style={{ padding: "80px 20px" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%" }}>
-            <h2 style={{ fontSize: 48, fontWeight: 700, marginBottom: 12 }}>
+            <h2 className="section-heading" style={{ fontSize: 48, fontWeight: 700, marginBottom: 12 }}>
               Tech Stack
             </h2>
             <p style={{ fontSize: 18, color: "#9ca3af", marginBottom: 16 }}>
@@ -389,6 +487,7 @@ const Portfolio = () => {
               }}
             />
             <div
+              className="tech-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
@@ -426,7 +525,7 @@ const Portfolio = () => {
           }}
         >
           <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%" }}>
-            <h2 style={{ fontSize: 48, fontWeight: 700, marginBottom: 12 }}>
+            <h2 className="section-heading" style={{ fontSize: 48, fontWeight: 700, marginBottom: 12 }}>
               Connect
             </h2>
             <p style={{ fontSize: 18, color: "#9ca3af", marginBottom: 16 }}>
@@ -441,6 +540,7 @@ const Portfolio = () => {
               }}
             />
             <div
+              className="contact-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: isMobile ? "1fr" : "repeat(2, 1fr)",
@@ -515,6 +615,7 @@ const Portfolio = () => {
       {showScrollButton && (
         <button
           onClick={scrollToTop}
+          className="scroll-top-btn"
           style={{
             position: "fixed",
             bottom: 32,

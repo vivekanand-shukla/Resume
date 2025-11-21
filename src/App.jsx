@@ -54,7 +54,7 @@ const contactData = [
 ];
 
 
-// ✅ Custom hook to track window width
+
 const useWindowWidth = () => {
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {

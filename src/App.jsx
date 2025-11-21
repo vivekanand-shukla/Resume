@@ -10,7 +10,7 @@ import * as SiIcons from "react-icons/si";
 
 
 
-// ✅ Data outside component
+
 const projectsData = [
   {
     title: "Anvaya CRM",

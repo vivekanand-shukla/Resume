@@ -56,13 +56,21 @@ const techStackData = [
   { data: "Express.js", icon: "SiExpress"  , iconSet: "Si",},
   { data: "Mongoose", icon: "SiMongoose" ,iconSet: "Si", },
   { data: "MongoDB", icon: "SiMongodb" ,  iconSet: "Si", },
+    { data: "GitHub", icon: "FaGithub", iconSet: "Fa" },
+  { data: "Vercel", icon: "SiVercel", iconSet: "Si" },
+  { data: "Postman", icon: "SiPostman", iconSet: "Si" },
 ];
 
 const contactData = [
   { type: "Email", icon: "FaEnvelope", text: "primevivek14@gmail.com" ,gotolink :"mailto:primevivek14@gmail.com" },
   { type: "GitHub", icon: "FaGithub", text: "Follow on GitHub" , gotolink :"https://github.com/vivekanand-shukla" },
   { type: "LinkedIn", icon: "FaLinkedin", text: "Connect on LinkedIn"  , gotolink :"https://www.linkedin.com/feed/"},
-  { type: "Twitter", icon: "FaTwitter", text: "Follow on Twitter" , gotolink :"primevivek14@gmail.com" },
+  {
+    type: "Resume",
+    icon: "FaFileAlt",
+    text: "Download Resume",
+    gotolink: "https://docs.google.com/document/d/1oRI1FnABIoW2axnTPXz4ytkHifWWTUyd5JLAx18vpXs/edit?tab=t.0",
+  },,
 ];
 
 
@@ -331,7 +339,8 @@ const Portfolio = () => {
                   color: "white",
                 }}
               >
-                Contact Me
+                <a  href={`#contact`} style={{ textDecoration:"none",  color:"inherit"}}>Contact Me</a>
+                
               </button>
               <button
                 style={{
@@ -345,7 +354,8 @@ const Portfolio = () => {
                   border: "1px solid #374151",
                 }}
               >
-               <a style={{textDecoration:"none" ,  backgroundColor: "transparent",
+               <a target="_blank"
+   style={{textDecoration:"none" ,  backgroundColor: "transparent",
                   color: "#9ca3af",}} href={`https://docs.google.com/document/d/1oRI1FnABIoW2axnTPXz4ytkHifWWTUyd5JLAx18vpXs/edit?tab=t.0`}>Resume</a>
               </button>
             </div>
@@ -457,6 +467,8 @@ const Portfolio = () => {
                           border: "none",
                           textDecoration: "none"
                         }}
+                        target="_blank"
+
                       >
                         👁 Demo
                       </a>
@@ -470,6 +482,8 @@ const Portfolio = () => {
                         border: "none",
                         textDecoration: "none"
                         }}
+                        target="_blank"
+
                       >
                         <FaCode /> Code
                       </a>
@@ -588,7 +602,8 @@ const Portfolio = () => {
         {IconComponent && <IconComponent size={24} color="#10b981" />}
         <h3 style={{ fontSize: 20, fontWeight: 600, margin: 0 }}>{c.type}</h3>
       </div>
-      <p style={{ color: "#9ca3af", fontSize: 15 }}> <a style={{textDecoration: "none" ,color: "#9ca3af"}} href={`${c.gotolink}`} >{c.text}</a> </p>
+      <p style={{ color: "#9ca3af", fontSize: 15 }}> <a target="_blank"
+ style={{textDecoration: "none" ,color: "#9ca3af"}} href={`${c.gotolink}`} >{c.text}</a> </p>
     </div>
   );
 })}

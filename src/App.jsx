@@ -21,7 +21,7 @@ management platform with secure JWT-based authentication,
 Built with a React frontend, Express/Node backend, and MongoDB database.`,
     image: "https://burst.shopifycdn.com/photos/business-women-working.jpg?width=1000&format=pjpg&exif=0&iptc=0",
     tags: ["React", "Node.js", "MongoDB", "Express.js" ,"jsonwebtoken" ],
-    demolink:":https://workasana-frontend-ten.vercel.app/",
+    demolink:"https://workasana-frontend-ten.vercel.app/",
     codelink:"https://github.com/vivekanand-shukla/workasana-frontend",
   },
   {

@@ -13,6 +13,18 @@ import * as SiIcons from "react-icons/si";
 
 const projectsData = [
   {
+    title: "Workanana",
+    description: `Developed WorkAsana, a full-stack MERN task and project 
+management platform with secure JWT-based authentication,
+ protected routes, user-friendly dashboards
+.
+Built with a React frontend, Express/Node backend, and MongoDB database.`,
+    image: "https://burst.shopifycdn.com/photos/business-women-working.jpg?width=1000&format=pjpg&exif=0&iptc=0",
+    tags: ["React", "Node.js", "MongoDB", "Express.js" ,"jsonwebtoken" ],
+    demolink:":https://workasana-frontend-ten.vercel.app/",
+    codelink:"https://github.com/vivekanand-shukla/workasana-frontend",
+  },
+  {
     title: "Anvaya CRM",
     description: `A full-stack Customer Relationship Management app where you can add, edit, view, and filter leads and sales agents.
 Built with a React frontend, Express/Node backend, and MongoDB database.`,
@@ -334,7 +346,7 @@ const Portfolio = () => {
                 }}
               >
                <a style={{textDecoration:"none" ,  backgroundColor: "transparent",
-                  color: "#9ca3af",}} href={`https://drive.google.com/file/d/1chjVbYUKEkmE1B-tzmuf98ByOX4p1-rD/view?usp=sharing`}>Resume</a>
+                  color: "#9ca3af",}} href={`https://docs.google.com/document/d/1oRI1FnABIoW2axnTPXz4ytkHifWWTUyd5JLAx18vpXs/edit?tab=t.0`}>Resume</a>
               </button>
             </div>
           </div>

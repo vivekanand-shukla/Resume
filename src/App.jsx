@@ -58,6 +58,8 @@ const techStackData = [
   { data: "MongoDB", icon: "SiMongodb" ,  iconSet: "Si", },
     { data: "GitHub", icon: "FaGithub", iconSet: "Fa" },
   { data: "Vercel", icon: "SiVercel", iconSet: "Si" },
+  { data: "Bootstrap", icon: "SiBootstrap", iconSet: "Si" },
+
   { data: "Postman", icon: "SiPostman", iconSet: "Si" },
 ];
 

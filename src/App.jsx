@@ -25,13 +25,13 @@ Built with a React frontend, Express/Node backend, and MongoDB database.`,
     codelink:"https://github.com/vivekanand-shukla/workasana-frontend",
   },
   {
-    title: "Anvaya CRM",
+    title: "LeadPilot",
     description: `A full-stack Customer Relationship Management app where you can add, edit, view, and filter leads and sales agents.
 Built with a React frontend, Express/Node backend, and MongoDB database.`,
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=500&fit=crop",
     tags: ["React", "Node.js", "MongoDB", "Express.js"],
-    demolink:"https://frontend-anvaya-88cbjdslz-vivekanand-shuklas-projects.vercel.app/",
-    codelink:"https://github.com/vivekanand-shukla/frontend_Anvaya",
+    demolink:"https://frontend-anvaya.vercel.app/",
+    codelink:"https://github.com/vivekanand-shukla/LeadPilot",
   },
   {
     title: "e-Commerce",
